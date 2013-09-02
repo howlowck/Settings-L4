@@ -1,0 +1,25 @@
+{
+    "name": "howlowck/settings-l4",
+    "description": "",
+    "tags": "laravel",
+    "authors": [
+        {
+            "name": "Hao Luo",
+            "email": "howlowck@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.0.x",
+        "howlowck/html-builder": "*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Howlowck\\SettingsL4": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
