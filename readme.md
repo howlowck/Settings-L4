@@ -8,7 +8,7 @@ This package is created to easily change application-level settings that Adminis
 2. run ``` composer update ```
 3. Add service provider by adding ``` 'Howlowck\SettingsL4\SettingsL4ServiceProvider', ``` in ``` app/config/app.php ```
 4. Add Setting Facade by adding ``` 'Setting' => 'Howlowck\SettingsL4\Facade\Setting' ``` in ``` app/config/app.php ```
-5. Run config:publish
+5. Run ``` php artisan config:publish howlowck/settings-l4```
 6. generate your own migration with the table name 'settings'. (if you want to use a table named other than 'settings', please change the 'table' config item in the configuration file)
 
 ## Configuration
