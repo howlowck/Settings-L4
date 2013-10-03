@@ -4,7 +4,7 @@ This package is created to easily change application-level settings that Adminis
 
 ## Setup 
 
-1. Include ``` "howlowck/html-builder": "dev-master", ``` in your application composer.json
+1. Include ``` "howlowck/settings-l4": "dev-master", ``` in your application composer.json
 2. run ``` composer update ```
 3. Add service provider by adding ``` 'Howlowck\SettingsL4\SettingsL4ServiceProvider', ``` in ``` app/config/app.php ```
 4. Add Setting Facade by adding ``` 'Setting' => 'Howlowck\SettingsL4\Facade\Setting' ``` in ``` app/config/app.php ```
@@ -15,12 +15,19 @@ This package is created to easily change application-level settings that Adminis
 In ``` app/config/howlowck/settings-l4/config.php ```
 
 ``` table ``` --- table name
+
 ``` db ``` --- whether to use db or redis
+
 ``` user_column ``` --- the column name of user if you want to capture who changed the setting (not implemented)
+
 ``` controller ``` --- the controller name
+
 ``` route_path ``` --- the route path to get to the settings resource controller
+
 ``` route_before ``` --- the filter string for before running to the route
+
 ``` route_after ``` --- the filter string after running to the route
+
 ``` form_types ``` --- the associated array for the input types are is associated with the database data fields, * is default
 
 ## To Use
@@ -40,4 +47,9 @@ The Settings Package allows you to interact your settings in various ways.
 The available paths are only ``` path/to/settings ``` and ```path/to/settings/settingName```
 
 ### Making your own views
-If you prefer to make your own views you can simply use ```Setting::getTitle($settingName)```, ```Setting::getField($settingName)```, ```Settings::getUpdateUrl($settingName)```... all of which should be self-explainatory.
+If you prefer to make your own views you can use the following 
+```Setting::getTitle($settingName)``` --- gives you the title of the setting 
+
+```Setting::getField($settingName)``` --- gives you the field of the setting
+
+```Settings::getUpdateUrl($settingName)``` --- gives you the correct url to put in your form action property
