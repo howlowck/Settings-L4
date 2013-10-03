@@ -10,7 +10,7 @@ This package is created to easily change application-level settings that Adminis
 4. Add Setting Facade by adding ``` 'Setting' => 'Howlowck\SettingsL4\Facade\Setting' ``` in ``` app/config/app.php ```
 5. Run ``` php artisan config:publish howlowck/settings-l4```
 6. generate your own migration with the table name 'settings'. (if you want to use a table named other than 'settings', please change the 'table' config item in the configuration file)
-
+7. generate a seed for one row of data. (it's required for settings to work properly)
 ## Configuration
 In ``` app/config/howlowck/settings-l4/config.php ```
 
