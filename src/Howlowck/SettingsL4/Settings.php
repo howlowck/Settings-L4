@@ -24,7 +24,7 @@ class Settings {
         $table = $this->config['table'];
         $settings = $this->db->table($table)->first();
         if (is_null($settings)) {
-            throw new Exception("Your settings table has no data!", 1);
+            throw new \Exception("Your settings table has no data!", 1);
         }
         return (array) $settings;
     }
