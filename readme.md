@@ -41,7 +41,7 @@ The Settings Package allows you to interact your settings in various ways.
 ### Built-in views and Routes
 1. Include ``` Setting::route() ``` in your routes.php this will set up a route group for your settings controller.  You can change the path and before/after filters in the config file.
 2. Copy the Settings Controller from ``` vendors/howlowck/settings-l4/src/controllers/SettingsController.php ``` to your controllers folder.  Feel free to change the name of the controller to anything you like, you just have to change the 'controller' configuration item in the config file.
-3. Run asset:publish
+3. Run ``` php artisan asset:publish howlowck/settings-l4```
 4. Now when you go to any path with ``` path/to/settings/settingName/edit ``` you will see a UI that allows you to edit the value.
 
 The available paths are only ``` path/to/settings ``` and ```path/to/settings/settingName```
